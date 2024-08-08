@@ -4,33 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speech to Text Converter</title>
+    <title>Speech to Text</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 16 16'><text x='0' y='14'>🗣️</text></svg>" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Speech to Text Converter</h1>
-        <div class="controls">
-            <select id="language-select">
-                <option value="en-US">English (US)</option>
-                <option value="es-ES">Spanish</option>
-                <option value="fr-FR">French</option>
-                <!-- Add more languages as needed -->
-            </select>
-            <button id="start-stop-btn">Start Recognition</button>
-            <button id="pause-resume-btn" disabled>Pause Recognition</button>
-            <button id="clear-btn">Clear Text</button>
-            <button id="download-btn">Download Text</button>
+    <div>
+        <div class="dark-mode-toggle">
+            <input type="checkbox" class="checkbox" id="dark-mode-toggle">
+            <label for="dark-mode-toggle" class="checkbox-label">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <span class="ball"></span>
+            </label>
         </div>
-        <textarea id="text-output" placeholder="Your speech will appear here..." readonly></textarea>
-        <p id="word-count">Word Count: 0</p>
-        <div class="toggle">
-            <label for="dark-mode-toggle">Dark Mode</label>
-            <input type="checkbox" id="dark-mode-toggle">
+        <div>
+            <h1>Speech to Text Converter</h1>
         </div>
+        <div class="container">
+            
+            <div class="controls">
+                <select id="language-select">
+                    <option value="en-US">English (US)</option>
+                    <option value="es-ES">Spanish</option>
+                    <option value="fr-FR">French</option>
+                </select>
+                <button><i class="fas fa-microphone"></i><span id="start-stop-btn">Start Recognition</span></button>
+                <button id="pause-resume-btn" disabled>Pause Recognition</button>
+                <button id="clear-btn">Clear Text</button>
+                <button id="download-btn">Download Text</button>
+            </div>
+            <textarea id="text-output" placeholder="Your speech will appear here..." readonly></textarea>
+
+            <p id="word-count">Word Count: 0</p>
+            <!-- <div class="toggle">
+                <label for="dark-mode-toggle">Dark Mode</label>
+                <input type="checkbox" id="dark-mode-toggle">
+            </div> -->
+        </div>
+        <!-- <img class="img-illustration" src="illustration.png" alt="Speaker" width="500" height="600"> -->
     </div>
     <script src="script.js"></script>
 </body>

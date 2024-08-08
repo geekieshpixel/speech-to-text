@@ -93,6 +93,12 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.toggle('dark-mode');
     });
 
+    // new dark mode toggle button
+    const checkbox = document.getElementById("checkbox")
+    checkbox.addEventListener("change", () => {
+        document.body.classList.toggle('dark-mode');
+    })
+
     function updateWordCount() {
         const text = textOutput.value.trim();
         const words = text.split(/\s+/).filter(word => word.length > 0);
