@@ -6,6 +6,12 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
 }
 
 .container {
@@ -14,13 +20,22 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .container {
+    background: #444;
 }
 
 h1 {
     margin-bottom: 20px;
 }
 
-button {
+.controls {
+    margin-bottom: 20px;
+}
+
+button, select {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -29,9 +44,10 @@ button {
     color: #fff;
     border-radius: 5px;
     transition: background-color 0.3s;
+    margin: 0 5px;
 }
 
-button:hover {
+button:hover, select:hover {
     background-color: #0056b3;
 }
 
@@ -44,6 +60,15 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.toggle {
+    margin-top: 20px;
 }
 
 @media (max-width: 600px) {
